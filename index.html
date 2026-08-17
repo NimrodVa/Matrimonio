@@ -1,1 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestra Boda - Maribel y Nimrod</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #8B4A5C;
+      --gold-accent: #D4AF37;
+      --text-dark: #4A4A4A;
+      --bg-cream: #FAF7F2;
+      --card-bg: rgba(255, 255, 255, 0.92);
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      background-image: radial-gradient(#e0d7cd 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 40px 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      text-align: center;
+      position: relative;
+    }
+
+    .subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      color: #6a6a6a;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: var(--primary-color);
+      font-weight: normal;
+      margin: 10px 0;
+    }
+
+    /* Sección de Música */
+    .music-player {
+      background: #f4ece1;
+      padding: 15px 20px;
+      border-radius: 30px;
+      margin: 25px auto;
+      max-width: 380px;
+      border: 1px solid var(--gold-accent);
+    }
+
+    .music-player p {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--primary-color);
+      margin-bottom: 8px;
+    }
+
+    .play-btn {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 8px 22px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .play-btn:hover {
+      background: #6e3847;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold-accent), transparent);
+      margin: 30px 0;
+    }
+
+    /* Countdown */
+    .countdown-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .time-box {
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      min-width: 65px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border: 1px solid #eee;
+    }
+
+    .time-box span {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .time-box label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+    }
+
+    /* Detalles del evento */
+    .details {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      margin: 20px 0;
+    }
+
+    .date-highlight {
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      font-weight: bold;
+      display: block;
+      margin: 10px 0;
+    }
+
+    .location {
+      font-size: 1.1rem;
+      margin-top: 15px;
+    }
+
+    /* Botón RSVP */
+    .rsvp-btn {
+      display: inline-block;
+      margin-top: 25px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 25px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+      transition: transform 0.2s;
+    }
+
+    .rsvp-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 2.8rem; }
+      .time-box { min-width: 55px; padding: 8px; }
+      .time-box span { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <p class="subtitle">Tenemos el gusto de invitarte en este día tan importante de nuestras vidas</p>
+    
+    <p class="subtitle" style="font-size: 1.4rem; font-weight: 600; color: var(--primary-color); margin-bottom: 0;">Nuestra Boda</p>
+    <h1>Maribel y Nimrod</h1>
+    
+    <p style="font-size: 0.9rem; margin-top: 10px;">Este día muy especial estaremos junto a nuestros seres queridos.</p>
+
+    <!-- Reproductor de audio -->
+    <div class="music-player">
+      <p>Dale play para escuchar nuestra canción</p>
+      <button class="play-btn" id="musicBtn" onclick="toggleMusic()">▶ Reproducir</button>
+      <!-- Reemplaza 'cancion.mp3' por la ruta de tu archivo de audio -->
+      <audio id="bgMusic" loop src="cancion.mp3"></audio>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Cuenta regresiva -->
+    <div class="countdown-title">Faltan</div>
+    <div class="countdown">
+      <div class="time-box"><span id="days">00</span><label>Días</label></div>
+      <div class="time-box"><span id="hours">00</span><label>Hs</label></div>
+      <div class="time-box"><span id="minutes">00</span><label>Min</label></div>
+      <div class="time-box"><span id="seconds">00</span><label>Seg</label></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Información de la invitación -->
+    <div class="details">
+      Viernes <span class="date-highlight">12 DE MARZO DE 2027</span> A LAS 18:00 HRS
+      <div class="location">
+        📍 Antuco, km 2.8, Los Ángeles
+      </div>
+    </div>
+
+    <!-- Confirmación WhatsApp -->
+    <a href="https://wa.me/56952135750?text=¡Hola!%20Me%20gustaría%20confirmar%20mi%20asistencia%20al%20matrimonio." target="_blank" class="rsvp-btn">
+      Confirmar Asistencia vía WhatsApp
+    </a>
+  </div>
+
+  <script>
+    // Control de audio
+    const music = document.getElementById('bgMusic');
+    const musicBtn = document.getElementById('musicBtn');
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        musicBtn.textContent = '❚❚ Pausar';
+      } else {
+        music.pause();
+        musicBtn.textContent = '▶ Reproducir';
+      }
+    }
+
+    // Lógica del Countdown para el 12 de Marzo de 2027 a las 18:00
+    const targetDate = new Date('March 12, 2027 18:00:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+      } else {
+        document.querySelector('.countdown').innerHTML = "<p style='font-size: 1.2rem; font-weight: bold;'>¡Hoy es el gran día!</p>";
+      }
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
